@@ -41,62 +41,6 @@ public class Interfata {
                 }
             }
         });
-        /*Polinom p1 = new Polinom();
-        p1.addMonom(new Monom(1, 3.0));
-        p1.addMonom(new Monom(2, 2.0));
-        p1.addMonom(new Monom(3, 1.0));
-
-        Polinom p2 = new Polinom();
-
-        p2.addMonom(new Monom(1, 3.0));
-        p2.addMonom(new Monom(2, 2.5));
-        p2.addMonom(new Monom(3, 1.0));
-        p2.addMonom(new Monom(5, 10.0));
-
-
-        Polinom p3 = Polinom.sumPolinom(p1, p2);
-        System.out.println(p1.toString());
-        System.out.println(p3.toString());
-        Polinom p4 = new Polinom();
-        p4.addMonom(new Monom(1, 2.0));
-        p4.addMonom(new Monom(2, 1.3));
-        p4.addMonom(new Monom(3, 5.0));
-        p4.addMonom(new Monom(5, 10.0));
-        p4.addMonom(new Monom(6, 7.0));
-
-        p3 = Polinom.substractPolinom(p3, p4);
-        System.out.println("\nSubstraction:\n" + p3.toString());
-        Polinom pMultiplication = new Polinom();
-
-        pMultiplication = Polinom.multiplyPolinom(p1, p3);
-        System.out.println("\nMultiplication:\n" + p1.toString());
-        System.out.println(p3.toString());
-        System.out.println(pMultiplication.toString());
-        // System.out.println(pMultiplication.getMaxGradeMonom().getGrad());
-
-        Polinom pDeimpartit = new Polinom();
-        pDeimpartit.addMonom(new Monom(0, -5.0));
-        pDeimpartit.addMonom(new Monom(1, 6.0));
-        pDeimpartit.addMonom(new Monom(2, 2.0));
-        pDeimpartit.addMonom(new Monom(3, 1.0));
-
-        Polinom pImpartitor = new Polinom();
-        pImpartitor.addMonom(new Monom(1, -1.0));
-        pImpartitor.addMonom(new Monom(2, 1.0));
-
-        ArrayList<Polinom> divisionResult = Polinom.dividePolinom(pDeimpartit, pImpartitor);
-        divisionResult = Polinom.dividePolinom(pImpartitor, pDeimpartit);
-        //Polinom pDivision = Polinom.dividePolinom(pDeimpartit,pImpartitor);
-        System.out.println("\nDivision:\n" + "\nRest: " + divisionResult.get((0)).toString() + "\nCat: " + divisionResult.get((1)).toString());
-
-
-        Polinom pDerivative = Polinom.derivativePolinom(p3);
-        System.out.println("\nDerivative:\n" + p3.toString());
-        System.out.println(pDerivative.toString());
-
-        Polinom pIntegral = Polinom.integratePolinom(p3);
-        System.out.println("\nIntegral:\n" + p3.toString());
-        System.out.println(pIntegral.toString());*/
     }
 
     /**
@@ -207,7 +151,7 @@ public class Interfata {
                     p1 = Parsing.parse(text_polinom1.getText());
                     p2 = Parsing.parse(text_polinom2.getText());
                 } catch (Exception ex) {
-                    throw new RuntimeException(ex);
+                    JOptionPane.showMessageDialog(null, ex.getMessage(), "Error", JOptionPane.WARNING_MESSAGE);
                 }
 
 
@@ -233,7 +177,7 @@ public class Interfata {
                     p1 = Parsing.parse(text_polinom1.getText());
                     p2 = Parsing.parse(text_polinom2.getText());
                 } catch (Exception ex) {
-                    throw new RuntimeException(ex);
+                    JOptionPane.showMessageDialog(null, ex.getMessage(), "Error", JOptionPane.WARNING_MESSAGE);
                 }
 
                 Polinom p3 = Polinom.multiplyPolinom(p1, p2);
@@ -290,7 +234,7 @@ public class Interfata {
                 try {
                     p1 = Parsing.parse(text_polinom1.getText());
                 } catch (Exception ex) {
-                    throw new RuntimeException(ex);
+                    JOptionPane.showMessageDialog(null, ex.getMessage(), "Error", JOptionPane.WARNING_MESSAGE);
                 }
 
                 Polinom p3 = Polinom.derivativePolinom(p1);
@@ -314,7 +258,7 @@ public class Interfata {
                     p1 = Parsing.parse(text_polinom1.getText());
                 } catch (Exception ex) {
 
-                    throw new RuntimeException(ex);
+                    JOptionPane.showMessageDialog(null, ex.getMessage(), "Error", JOptionPane.WARNING_MESSAGE);
                 }
 
                 Polinom p3 = Polinom.integratePolinom(p1);

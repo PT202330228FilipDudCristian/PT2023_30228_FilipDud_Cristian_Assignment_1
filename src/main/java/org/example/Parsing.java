@@ -57,4 +57,3 @@ public class Parsing {
         return polinomFinal;
     }
 }
-//https://stackoverflow.com/questions/36490757/regex-for-polynomial-expression
